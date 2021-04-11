@@ -7,15 +7,12 @@
 
 nav{
 	height: 90px;
-	color: #ffffff;
-	 text-transform: uppercase;}
+	 color: #ffffff;}
 
 a{
 	cursor: pointer;
  	font-weight: bold;
  	color: #ffffff}
- 
-a.btn-nav:hover{color: #A1887F;} 	
 
 .neo-section{
 	min-height: 920px;
@@ -80,15 +77,4 @@ a.btn-nav:hover{color: #A1887F;}
 	font-size: 1.25em;
 	padding: 15px;
 }
-
-/*Responsividade*/ 
-
-@media screen and (max-width: 667px){
-	
-	.wm{width:100%;}
-	nav{height: 100%;}
-	.neo-container{margin-top: 120px;}
-	}
-
-
 

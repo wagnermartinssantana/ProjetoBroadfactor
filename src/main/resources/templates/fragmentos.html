@@ -14,44 +14,40 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-  	
   </head>
   <body>
   
-
-	<div th:replace="fragmentos :: cabecalho"> </div>
+    	<header th:fragment="cabecalho">
+  		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #AD1457">
+  		<a class="navbar-brand" href="https://broadfactor.com/">
+  			<img src="broadfactorimgpng.png" width="200px"/>
+  		</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
+  			<span class="navbar-toggler-icon"></span>
+  		</button>	
   	
-  	<section class="neo-section" style="background-image: url('sistem4.jpg');">
+  		<div id="navMobile" class="navbar-collapse collapse justify-content-end">
+  			
+  			<a class="btn-nav nav-item nav-link" th:href="@{/}"><i class="bi bi-house"></i> Home</a>
+  			<a class="btn-nav nav-item nav-link" th:href="@{/inserirUsuarios}" ><i class="bi bi-person-circle"></i> Cadastrar Usuário</a>
+  			<a class="btn-nav nav-item nav-link"><i class="bi bi-search"></i> Pesquisar Usuário</a>
+  			<a class="btn-nav nav-item nav-link btn-danger"><i class="bi bi-x"></i> Sair</a>
+  		
+  		</div>
+  	</nav>
+  	</header>
   	
-  	<div class="sombra"></div>
-  	
-  	
-  	<div class="center neo-container">
-  		<h1 class="texto-centro">Sistema de Gerenciamento de Usuários</h1>
-  
-  	
-  	<div class="botoes">
-  	
-	<div class="wm">
-  		<h5 class="btn">CADASTRAR USUÁRIO</h5n>
-	</div>
-
-	<div class="wm">
-  		<h5 class="btn justify-content-center">ENCONTRAR USUÁRIO</h5>
-	</div>
-
-
+  	<footer th:fragment="rodape">
+  	<div class="rodape">
+  		<span> Todos os Direitos Reservados - 2021 &copy; Wagner Martins </span>
+  	 </div> 
+  	</footer>
 	
-	<div class="clear"></div>
-		</div>
-	</div>
-  	</section>
   	
-  	<div th:replace="fragmentos :: rodape"> </div>
-
-	
+  	
+  	
+  	
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
   </body>
