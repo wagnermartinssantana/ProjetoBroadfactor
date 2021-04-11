@@ -5,16 +5,24 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CollectionTable;
+import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import br.com.projetobroadfactor.enums.Sexo;
 
 
 @Entity
+@Table(name = "usuario")
 public class Usuario implements Serializable { 
 		
 		private static final long serialVersionUID = 1L;
@@ -23,16 +31,31 @@ public class Usuario implements Serializable {
 		
 		@Id
 		@GeneratedValue(strategy=GenerationType.AUTO)
-	    private Long id;
+	    private Integer id;
 	    
+		@Size(min =5, max = 35, message = "O nome deve conter no minimo 5 caracteres")
+		@NotBlank(message = "O nome não pode ser vazio!")
 	    private String nome;
 	    private String cpf;
-	    private String rg;
+	    
+	    private String cnpj;
+	    
 	    private String data_nasc;
 	    
+	    @Enumerated(EnumType.STRING)
 	    private Sexo sexo;
+	   
+	   
+
+	    // valor unico para E-MAIL e não pode ser nulo
+	    @Email
+	    @Column(unique=true)
+	    @NotBlank(message = "O e-mail não pode ser vazio e não pode repetir!")
+	    private String email;
+	   
 	    
-	   private String email;
+	    
+	    
 	    
 		@ElementCollection
 		@CollectionTable(name ="TELEFONE")
@@ -47,7 +70,7 @@ public class Usuario implements Serializable {
 	    private String estado;
 	    
 	    
-
+	     
 		private String senha;
 	    
 	    
@@ -59,14 +82,14 @@ public class Usuario implements Serializable {
 
 
 
-	public Usuario(Long id, String nome, String cpf, String rg, String data_nasc, Sexo sexo, String email,
+	public Usuario(Integer id, String nome, String cpf, String cnpj, String data_nasc, Sexo sexo, String email,
 				Set<String> telefones, String cep, String endereco, String numero, String bairro, String cidade,
 				String estado, String senha) {
 			super();
 			this.id = id;
 			this.nome = nome;
 			this.cpf = cpf;
-			this.rg = rg;
+			this.cnpj = cnpj;
 			this.data_nasc = data_nasc;
 			this.sexo = sexo;
 			this.email = email;
@@ -92,10 +115,10 @@ public class Usuario implements Serializable {
 
 
 
-		public Long getId() {
+		public Integer getId() {
 			return id;
 		}
-		public void setId(Long id) {
+		public void setId(Integer id) {
 			this.id = id;
 		}
 		public String getNome() {
@@ -110,11 +133,11 @@ public class Usuario implements Serializable {
 		public void setCpf(String cpf) {
 			this.cpf = cpf;
 		}
-		public String getRg() {
-			return rg;
+		public String getCnpj() {
+			return cnpj;
 		}
-		public void setRg(String rg) {
-			this.rg = rg;
+		public void setCnpj(String cnpj) {
+			this.cnpj = cnpj;
 		}
 		public String getData_nasc() {
 			return data_nasc;
@@ -191,7 +214,9 @@ public class Usuario implements Serializable {
 			this.senha = senha;
 		}
 
-
+		
+		
+		
 		@Override
 		public int hashCode() {
 			final int prime = 31;
