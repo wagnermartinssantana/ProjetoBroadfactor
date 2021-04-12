@@ -1,6 +1,11 @@
 #Bem Vindo!
 #Meu nome é Wagner Martins é um prazer apresentar um pouco dos meus conhecimentos a você!
 
+#Tecnologias Utilizadas
+-SpringBoot Maven / Hibernate / JPA
+-Boostrap , Html, Css, JavaScript
+-MySQL
+
 #Rodar
 -nome do banco configurado = banco. usuário = root . senha = 1234.
 -Na tela login tem um campo para cadastrar clique nele, eu não fiz a implementação do login usuário, quando você clicar você já vai estar dentro do sistema na aba de cadastro. Onde possue Algumas informações na nav.bar a logo da Broadfactor que encaminha para o site Broadfactor. Home que redireciona para uma pagina inicial mais estilizada. Cadastro. Listar. Pesquisar (já esta com o controller pronto só verificar o motivo de não esta sendo chamada, talvez pode ser algo do Bootstrap), e sair que volta para a tela de login.
