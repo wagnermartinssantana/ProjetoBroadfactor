@@ -1,0 +1,24 @@
+#Bem Vindo!
+#Meu nome é Wagner Martins é um prazer apresentar um pouco dos meus conhecimentos a você!
+
+#Rodar
+-nome do banco configurado = banco. usuário = root . senha = 1234.
+-Na tela login tem um campo para cadastrar clique nele, eu não fiz a implementação do login usuário, quando você clicar você já vai estar dentro do sistema na aba de cadastro. Onde possue Algumas informações na nav.bar a logo da Broadfactor que encaminha para o site Broadfactor. Home que redireciona para uma pagina inicial mais estilizada. Cadastro. Listar. Pesquisar (já esta com o controller pronto só verificar o motivo de não esta sendo chamada, talvez pode ser algo do Bootstrap), e sair que volta para a tela de login.
+
+
+#Erros que foram tratados na realização dos projetos
+- Tive alguns erros que tomaram meu precioso tempo. Um foi erro do mysql uma questão do timezone não estava deixando conectar, troquei o driver e coloquei uma especificação no link jdbc:mysql://localhost:3306/banco?useTimezone=true&serverTimezone=UTC. 
+- Outra foi questão que o Maven não sei se é a versão mas acontecia um erro no pom.xml e também eu colocando tudo separado em pastas na parte de templates e style ele não estava encontrando, tanto é que até deixei fora das pastas pois tinha colocado tudo certo mas acontecia esse erro. Mas no fim deu tudo ok rsrs!
+
+
+#Observação
+-Este projeto esta incompleto pois tive alguns contra-tempos (recebi ele na sexta e trabalhei sábado, mas dei o meu melhor no tempo que tive, entreguei ele no domingo a noite pois na segunda estou trabalhando. :) )
+-Peço que observe os detalhes da construção e das paginas. Ele é responsivo e foi feito com algumas estilizações especificas.
+-Meu intuito era deixar ele todo Integrado com envio de e-mails, Fazer filtro de usuários ativos ou não, o filtro da pesquisa já esta pronto, a api já comecei a integrar. Fiz várias funciões JPA, até utilizei algumas que não precisava tipo a do Usuário.telefone que gera uma tabela vinculada a usuário x telefone. Tem muita coisa a ser implementada inclusive eu tenho outros projetos maiores, em execução para envio de e-mails com  deploy para plataforma heroku porém a questão foi tempo :\. Mas aprecie meu esforço de 2 noites e 1 dia rssr. 
+
+
+Qualquer dúvida estou à disposição!
+contatos: wagnermartinssantana@gmail.com  || (31) 9 7543-4151
+
+Um forte abraço e até mais! :)
+ 
